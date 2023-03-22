@@ -1,0 +1,86 @@
+programa {
+    funcao inicio() {
+      inteiro n1,n2,n3,n4,quant_impares=0,soma=0,maior_par=0,menor=10000,maior=0,subtracao
+      real media
+  
+      escreva("Informe o primeiro número: ")
+      leia(n1)
+      escreva("Informe o segundo número: ")
+      leia(n2)
+      escreva("Informe o terceiro número: ")
+      leia(n3)
+      escreva("Informe o quarto número: ")
+      leia(n4)
+      
+      se(n1%2==1){
+       soma=soma+n1
+       quant_impares=quant_impares+1
+      }
+       se(n2%2==1){
+       soma=soma+n2
+       quant_impares=quant_impares+1
+      }
+       se(n3%2==1){
+       soma=soma+n3
+       quant_impares=quant_impares+1
+      } senao se(n4%2==1){
+        soma=soma+n4
+        quant_impares=quant_impares+1
+      }
+      senao {
+        escreva("Não tem  número ímpar")
+      }
+      media= soma/quant_impares
+      escreva("A média dos números ímpares são "+media+"\n")
+  
+      se(n1%2==0){
+        se(n1>maior_par){
+          maior_par=n1
+        }
+      }
+      se(n2%2==0){
+        se(n2>maior_par){
+          maior_par=n2
+        }
+      }
+      se(n3%2==0){
+        se(n3>maior_par){
+          maior_par=n3
+        }
+      }
+      se(n4%2==0){
+        se(n4>maior_par){
+          maior_par=n4
+        }
+      }
+        escreva("O maior número par é "+maior_par+"\n")
+  
+        se(n1<menor){
+          menor=n1
+        }
+        se(n2<menor){
+          menor=n2
+        }
+        se(n3<menor){
+          menor=n3
+        }
+        se(n4<menor){
+          menor=n4
+        }
+        se(n1>maior){
+          maior=n1
+        }
+        se(n2>maior){
+          maior=n2
+        }
+        se(n3>maior){
+          maior=n3
+        }
+        se(n4>maior){
+          maior=n4
+        }
+      subtracao=maior-menor
+      escreva("A subtração do maior e menor número é "+subtracao+"\n")
+  
+    }
+  }
